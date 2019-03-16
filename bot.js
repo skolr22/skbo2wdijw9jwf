@@ -774,10 +774,10 @@ client.on('message', message=>{
     if(!message.channel.guild) return;
     if(message.content.startsWith(prefix+'setlog')) {  
     if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**تحتاج الى `MANAGE_CHANNELS`**");
-    let log = message.guild.channels.find("name", "log")  
+    let log = message.guild.channels.find("name", "log-s")  
     if(log) return message.reply("**يوجد بالفعل روم اللوق**")   
     if(!log) {   
-    message.guild.createChannel("log", "text").then(c=> {  
+    message.guild.createChannel("log-s", "text").then(c=> {  
         c.overwritePermissions(message.guild.id, {  
             SEND_MESSAGES: false
     })
@@ -3829,14 +3829,14 @@ client.on("message", message => {
   ●▬▬▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬●
 1) لا تنشر سيرفرات دسكورد بالعام او بالخاص..
 2) لا تتكلم عن اشياء مشبوهة او اشياء مالها داعي
-3) لا تلعب بالهاك وتدخل مع ناس يلعبون بهاك بماين كرافت
+3) لاتسب احد 
 4) حاول انك ما تسب احد..
 5) لا تكون عنصري ولا تتحرش بأحد بطريقة وصخة...
 6) لا تضحك ع أشياء حساسة..
 7) لا تتكلم عن السياسة ا شيء ديني او حساس
 8) أحترم الأخرين وفكر باللي تقوله
 9) لا تتحرش بالناس ولا تكون شخص متنمر
-10) لا تنشر سيرفرات اخرى ماين كرافت
+10) لا تطلب ادمنيه
 11) لا ترسل روابط مواقع او اي شيء اباحي 
 12) لا تحرق ع ناس افلام او مقاطع الخ..
 13) لا تناقش او تصنع نقاشات بين الآخريين
