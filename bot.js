@@ -911,7 +911,16 @@ client.on('roleUpdate', (oldRole, newRole) => {
                 var newColor = '`Default`';  
             }else {
                 var newColor = newRole.hexColor;  
-            }  
+	    }
+            let  = new Discord.RichEmbed()  
+            .setTitle('**[ROLE COLOR ]**')  
+            .setThumbnail(userAvatar)  
+            .setColor('BLUE')  
+            .setDescription(`**\n**:white_check_mark: Successfully \`\`EDITED\`\` **${oldRole.name}** Role Color.\n\n**Old Color:** ${oldColor}\n**New Color:** ${newColor}\n**Role ID:** ${oldRole.id}\n**By:** <@${userID}> (ID: ${userID})`)
+            .setTimestamp()  
+   
+            logChannel.send(roleUpdateColor);
+        }
         if(oldRole.permissions !== newRole.permissions) {  
             let roleUpdate = new Discord.RichEmbed()  
             .setTitle('**[UPDATE ROLE PERMISSIONS]**')  
