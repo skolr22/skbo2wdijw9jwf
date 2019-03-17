@@ -912,7 +912,6 @@ client.on('roleUpdate', (oldRole, newRole) => {
             }else {
                 var newColor = newRole.hexColor;  
             }  
-            
         if(oldRole.permissions !== newRole.permissions) {  
             let roleUpdate = new Discord.RichEmbed()  
             .setTitle('**[UPDATE ROLE PERMISSIONS]**')  
